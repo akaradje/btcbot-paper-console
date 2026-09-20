@@ -78,7 +78,7 @@ code { font-family:Consolas,monospace; color:var(--signal); font-size:12px; }
   <h1>btcbot <span>// paper</span></h1>
   <span class="badge ok" id="live-badge"><span class="dot"></span> PAPER ACTIVE</span>
   <span class="badge warn"><span class="dot off"></span> VENUE ORDERS: OFF</span>
-  <span class="badge haze mono" id="updated-badge">updated 2026-09-20T20:55:53Z</span>
+  <span class="badge haze mono" id="updated-badge">updated 2026-09-20T20:56:04Z</span>
   <span class="badge haze mono">I0–I54 · fencing+wal · realtime</span>
 </header>
 <main>
@@ -129,7 +129,7 @@ code { font-family:Consolas,monospace; color:var(--signal); font-size:12px; }
   <div class="card">
     <h3>Spot book key</h3>
     <div class="mono" style="font-size:11px;word-break:break-all">binance|paper-spot|binance:BTCUSDT:SPOT|one_way</div>
-    <div class="dim mono" style="margin-top:8px">fencing_epoch=8 · regime=strong_uptrend</div>
+    <div class="dim mono" style="margin-top:8px">fencing_epoch=9 · regime=strong_uptrend</div>
   </div>
   <div class="card">
     <h3>Perp book key</h3>
@@ -359,7 +359,7 @@ code { font-family:Consolas,monospace; color:var(--signal); font-size:12px; }
 </div>
 </main>
 <script type="application/json" id="paper-status">
-{"spot": {"run_id": "paper_20260921_035023", "market": "spot", "symbol": "BTC/USDT", "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way", "fencing_epoch": 8, "regime": "strong_uptrend", "mark": 81078.18, "equity": 10000.0, "cash": 10000.0, "pos_qty": 0.0, "cycles": 3, "total_orders": 0, "strategies": ["ema_cross", "bollinger_reversion", "grid_dca", "funding_bias", "supertrend"], "ownership_tag": "paper", "mode": "paper_realtime", "venue_orders": false, "wal_enabled": true, "fencing_enabled": true, "book_keyed": true, "start_equity": 10000.0, "realtime": {"poll_s": 20.0, "polls": 16, "closed_bars_processed": 3, "errors": 0, "poll_latency_ms_p50": 298.7979000026826, "decision_latency_ms_p50": 137.35149998683482, "last_bar_ts": 1789934400000, "uptime_s": 330.39}, "updated_iso": "2026-09-20T20:55:53Z"}, "perp": {"run_id": "paper_20260921_035231", "market": "perp", "symbol": "BTC/USDT:USDT", "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way", "fencing_epoch": 9, "regime": "strong_uptrend", "mark": 81045.5, "equity": 10000.0, "cash": 10000.0, "pos_qty": 0.0, "cycles": 3, "total_orders": 0, "strategies": ["ema_cross", "bollinger_reversion", "grid_dca", "funding_bias", "supertrend"], "ownership_tag": "paper", "mode": "paper_realtime", "venue_orders": false, "wal_enabled": true, "fencing_enabled": true, "book_keyed": true, "start_equity": 10000.0, "realtime": {"poll_s": 20.0, "polls": 11, "closed_bars_processed": 3, "errors": 0, "poll_latency_ms_p50": 292.9145999951288, "decision_latency_ms_p50": 66.83639998664148, "last_bar_ts": 1789934400000, "uptime_s": 213.41}, "updated_iso": "2026-09-20T20:56:04Z"}}
+{"spot": {"run_id": "paper_20260921_035231", "market": "spot", "symbol": "BTC/USDT", "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way", "fencing_epoch": 9, "regime": "strong_uptrend", "mark": 81078.18, "equity": 10000.0, "cash": 10000.0, "pos_qty": 0.0, "cycles": 3, "total_orders": 0, "strategies": ["ema_cross", "bollinger_reversion", "grid_dca", "funding_bias", "supertrend"], "ownership_tag": "paper", "mode": "paper_realtime", "venue_orders": false, "wal_enabled": true, "fencing_enabled": true, "book_keyed": true, "start_equity": 10000.0, "realtime": {"poll_s": 20.0, "polls": 11, "closed_bars_processed": 3, "errors": 0, "poll_latency_ms_p50": 304.1578999836929, "decision_latency_ms_p50": 60.99060000269674, "last_bar_ts": 1789934400000, "uptime_s": 213.95}, "updated_iso": "2026-09-20T20:56:04Z"}, "perp": {"run_id": "paper_20260921_035231", "market": "perp", "symbol": "BTC/USDT:USDT", "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way", "fencing_epoch": 9, "regime": "strong_uptrend", "mark": 81045.5, "equity": 10000.0, "cash": 10000.0, "pos_qty": 0.0, "cycles": 3, "total_orders": 0, "strategies": ["ema_cross", "bollinger_reversion", "grid_dca", "funding_bias", "supertrend"], "ownership_tag": "paper", "mode": "paper_realtime", "venue_orders": false, "wal_enabled": true, "fencing_enabled": true, "book_keyed": true, "start_equity": 10000.0, "realtime": {"poll_s": 20.0, "polls": 11, "closed_bars_processed": 3, "errors": 0, "poll_latency_ms_p50": 292.9145999951288, "decision_latency_ms_p50": 66.83639998664148, "last_bar_ts": 1789934400000, "uptime_s": 213.41}, "updated_iso": "2026-09-20T20:56:04Z"}}
 </script>
 <script>
 (function () {
