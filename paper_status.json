@@ -67,14 +67,14 @@
     "start_equity": 10000.0,
     "realtime": {
       "poll_s": 20.0,
-      "polls": 20,
+      "polls": 21,
       "closed_bars_processed": 3,
       "errors": 0,
       "poll_latency_ms_p50": 295.09800000232644,
       "decision_latency_ms_p50": 179.4655999983661,
       "last_bar_ts": 1789934400000,
-      "uptime_s": 408.31
+      "uptime_s": 429.02
     },
-    "updated_iso": "2026-09-20T20:57:12Z"
+    "updated_iso": "2026-09-20T20:57:33Z"
   }
 }
