@@ -1,20 +1,17 @@
 {
   "spot": {
-    "run_id": "paper_20260921_004354",
+    "run_id": "paper_20260921_035023",
     "market": "spot",
     "symbol": "BTC/USDT",
     "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
-    "fencing_epoch": 5,
+    "fencing_epoch": 8,
     "regime": "strong_uptrend",
-    "mark": 81366.62,
-    "equity": 9999.00886119107,
-    "cash": 9698.910677841,
-    "pos_qty": 0.0036882223121726104,
-    "cycles": 400,
-    "total_orders": 19,
-    "walk_orders": 19,
-    "n_signals": 0,
-    "n_vetoes": 0,
+    "mark": 81120.0,
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "pos_qty": 0.0,
+    "cycles": 3,
+    "total_orders": 0,
     "strategies": [
       "ema_cross",
       "bollinger_reversion",
@@ -23,67 +20,37 @@
       "supertrend"
     ],
     "ownership_tag": "paper",
-    "mode": "paper",
+    "mode": "paper_realtime",
     "venue_orders": false,
     "wal_enabled": true,
     "fencing_enabled": true,
     "book_keyed": true,
     "start_equity": 10000.0,
-    "recent_orders": [],
-    "summary": {
-      "run_id": "paper_20260921_004354",
-      "cycles": 400,
-      "total_orders": 19,
-      "book": {
-        "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
-        "venue": "binance",
-        "account_id": "paper-spot",
-        "instrument_id": "binance:BTCUSDT:SPOT",
-        "position_mode": "one_way"
-      },
-      "fencing_epoch": 5,
-      "engine_decision_path": "coordinator+risk+exit+paper",
-      "wal_rpo": "RPO = last journal record acknowledged after file fsync; group-commit window = fsync interval; rotation requires atomic rename + parent dir fsync",
-      "storage_halted": false,
-      "halted": false,
-      "halt_level": "none",
-      "regime": "strong_uptrend",
-      "fingerprint": {
-        "engine_version": "2.2.0",
-        "git_commit": "unknown",
-        "config_hash": "5bc2a95ff10f8a3f",
-        "dataset_hash": "8aff85a9d167d0e7",
-        "strategies": [
-          "ema_cross",
-          "bollinger_reversion",
-          "grid_dca",
-          "funding_bias",
-          "supertrend"
-        ],
-        "seed": 0,
-        "market": "spot",
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0"
-      }
+    "realtime": {
+      "poll_s": 20.0,
+      "polls": 5,
+      "closed_bars_processed": 3,
+      "errors": 0,
+      "poll_latency_ms_p50": 290.16480001155287,
+      "decision_latency_ms_p50": 137.35149998683482,
+      "last_bar_ts": 1789934400000,
+      "uptime_s": 92.65
     },
-    "updated_iso": "2026-09-20T17:44:24Z"
+    "updated_iso": "2026-09-20T20:51:55Z"
   },
   "perp": {
-    "run_id": "paper_20260921_004424",
+    "run_id": "paper_20260921_035023",
     "market": "perp",
     "symbol": "BTC/USDT:USDT",
     "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
-    "fencing_epoch": 6,
+    "fencing_epoch": 8,
     "regime": "strong_uptrend",
-    "mark": 81331.0,
-    "equity": 10061.879236563178,
-    "cash": 9962.18221422258,
-    "pos_qty": 0.003676291792676094,
-    "cycles": 400,
-    "total_orders": 37,
-    "walk_orders": 37,
-    "n_signals": 0,
-    "n_vetoes": 0,
+    "mark": 81074.9,
+    "equity": 10000.0,
+    "cash": 10000.0,
+    "pos_qty": 0.0,
+    "cycles": 3,
+    "total_orders": 0,
     "strategies": [
       "ema_cross",
       "bollinger_reversion",
@@ -92,49 +59,22 @@
       "supertrend"
     ],
     "ownership_tag": "paper",
-    "mode": "paper",
+    "mode": "paper_realtime",
     "venue_orders": false,
     "wal_enabled": true,
     "fencing_enabled": true,
     "book_keyed": true,
     "start_equity": 10000.0,
-    "recent_orders": [],
-    "summary": {
-      "run_id": "paper_20260921_004424",
-      "cycles": 400,
-      "total_orders": 37,
-      "book": {
-        "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
-        "venue": "binance",
-        "account_id": "paper-perp",
-        "instrument_id": "binance:BTCUSDT-USDT:PERP",
-        "position_mode": "one_way"
-      },
-      "fencing_epoch": 6,
-      "engine_decision_path": "coordinator+risk+exit+paper",
-      "wal_rpo": "RPO = last journal record acknowledged after file fsync; group-commit window = fsync interval; rotation requires atomic rename + parent dir fsync",
-      "storage_halted": false,
-      "halted": false,
-      "halt_level": "none",
-      "regime": "strong_uptrend",
-      "fingerprint": {
-        "engine_version": "2.2.0",
-        "git_commit": "unknown",
-        "config_hash": "5bc2a95ff10f8a3f",
-        "dataset_hash": "1d7ce3426ccade2c",
-        "strategies": [
-          "ema_cross",
-          "bollinger_reversion",
-          "grid_dca",
-          "funding_bias",
-          "supertrend"
-        ],
-        "seed": 0,
-        "market": "perp",
-        "python": "3.12.10",
-        "platform": "Windows-11-10.0.26200-SP0"
-      }
+    "realtime": {
+      "poll_s": 20.0,
+      "polls": 5,
+      "closed_bars_processed": 3,
+      "errors": 0,
+      "poll_latency_ms_p50": 285.99230002146214,
+      "decision_latency_ms_p50": 179.4655999983661,
+      "last_bar_ts": 1789934400000,
+      "uptime_s": 86.67
     },
-    "updated_iso": "2026-09-20T17:44:54Z"
+    "updated_iso": "2026-09-20T20:51:50Z"
   }
 }
