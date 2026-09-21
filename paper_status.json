@@ -6,7 +6,7 @@
     "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
     "fencing_epoch": 8,
     "regime": "mild_uptrend",
-    "mark": 81514.0,
+    "mark": 81484.0,
     "equity": 10000.0,
     "cash": 10000.0,
     "pos_qty": 0.0,
@@ -28,15 +28,15 @@
     "start_equity": 10000.0,
     "realtime": {
       "poll_s": 20.0,
-      "polls": 912,
+      "polls": 913,
       "closed_bars_processed": 3,
       "errors": 7,
-      "poll_latency_ms_p50": 258.8605000055395,
+      "poll_latency_ms_p50": 258.8370000012219,
       "decision_latency_ms_p50": 137.35149998683482,
       "last_bar_ts": 1789956000000,
-      "uptime_s": 20023.63
+      "uptime_s": 20043.96
     },
-    "updated_iso": "2026-09-21T02:24:06Z"
+    "updated_iso": "2026-09-21T02:24:26Z"
   },
   "perp": {
     "run_id": "paper_20260921_035023",
