@@ -1,48 +1,9 @@
 {
-  "updated_iso": "2026-09-21T08:57:38Z",
+  "updated_iso": "2026-09-21T08:57:45Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 83688.0,
+  "live_ticker": 83727.16,
   "sessions": [
-    {
-      "run_id": "paper_20260921_035023",
-      "market": "perp",
-      "symbol": "BTC/USDT:USDT",
-      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
-      "fencing_epoch": 8,
-      "regime": "strong_uptrend",
-      "mark": 83688.0,
-      "equity": 10000.0,
-      "cash": 10000.0,
-      "pos_qty": 0.0,
-      "cycles": 3,
-      "total_orders": 0,
-      "strategies": [
-        "ema_cross",
-        "bollinger_reversion",
-        "grid_dca",
-        "funding_bias",
-        "supertrend"
-      ],
-      "ownership_tag": "paper",
-      "mode": "paper_realtime",
-      "venue_orders": false,
-      "wal_enabled": true,
-      "fencing_enabled": true,
-      "book_keyed": true,
-      "start_equity": 10000.0,
-      "realtime": {
-        "poll_s": 20.0,
-        "polls": 2034,
-        "closed_bars_processed": 3,
-        "errors": 14,
-        "poll_latency_ms_p50": 255.92349999351427,
-        "decision_latency_ms_p50": 179.4655999983661,
-        "last_bar_ts": 1789977600000,
-        "uptime_s": 43634.12
-      },
-      "updated_iso": "2026-09-21T08:57:38Z"
-    },
     {
       "run_id": "paper_20260921_104616",
       "market": "spot",
@@ -50,7 +11,7 @@
       "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
       "fencing_epoch": 11,
       "regime": "mild_uptrend",
-      "mark": 83732.08,
+      "mark": 83727.16,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -72,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 1092,
+        "polls": 1093,
         "closed_bars_processed": 8,
         "errors": 1,
-        "poll_latency_ms_p50": 255.47329999972135,
+        "poll_latency_ms_p50": 255.46099996427074,
         "decision_latency_ms_p50": 102.15380002046004,
         "last_bar_ts": 1789977600000,
-        "uptime_s": 18671.25
+        "uptime_s": 18689.81
       },
-      "updated_iso": "2026-09-21T08:57:27Z"
+      "updated_iso": "2026-09-21T08:57:45Z"
     }
   ],
   "start_equity": 10000.0,
