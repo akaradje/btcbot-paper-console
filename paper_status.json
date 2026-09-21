@@ -1,8 +1,8 @@
 {
-  "updated_iso": "2026-09-21T12:11:18Z",
+  "updated_iso": "2026-09-21T12:11:36Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 84899.9,
+  "live_ticker": 84964.4,
   "sessions": [
     {
       "run_id": "paper_20260921_104616",
@@ -11,7 +11,7 @@
       "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
       "fencing_epoch": 11,
       "regime": "strong_uptrend",
-      "mark": 84899.9,
+      "mark": 84964.4,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -33,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 1769,
+        "polls": 1770,
         "closed_bars_processed": 12,
         "errors": 1,
-        "poll_latency_ms_p50": 266.8899000273086,
+        "poll_latency_ms_p50": 266.27389999339357,
         "decision_latency_ms_p50": 123.74210002599284,
         "last_bar_ts": 1789992000000,
-        "uptime_s": 30302.24
+        "uptime_s": 30320.98
       },
-      "updated_iso": "2026-09-21T12:11:18Z"
+      "updated_iso": "2026-09-21T12:11:36Z"
     },
     {
       "run_id": "paper_20260921_035023",
@@ -50,7 +50,7 @@
       "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
       "fencing_epoch": 8,
       "regime": "strong_uptrend",
-      "mark": 84913.9,
+      "mark": 85008.7,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -72,15 +72,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 20.0,
-        "polls": 2583,
+        "polls": 2584,
         "closed_bars_processed": 3,
         "errors": 18,
-        "poll_latency_ms_p50": 268.78550002584234,
+        "poll_latency_ms_p50": 268.86349997948855,
         "decision_latency_ms_p50": 137.35149998683482,
         "last_bar_ts": 1789992000000,
-        "uptime_s": 55243.71
+        "uptime_s": 55268.15
       },
-      "updated_iso": "2026-09-21T12:11:06Z"
+      "updated_iso": "2026-09-21T12:11:31Z"
     }
   ],
   "start_equity": 10000.0,
