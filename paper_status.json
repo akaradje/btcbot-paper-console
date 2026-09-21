@@ -1,8 +1,8 @@
 {
-  "updated_iso": "2026-09-21T18:42:23Z",
+  "updated_iso": "2026-09-21T18:42:46Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 85950.86,
+  "live_ticker": 85967.66,
   "sessions": [
     {
       "run_id": "paper_20260921_035023",
@@ -11,7 +11,7 @@
       "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
       "fencing_epoch": 8,
       "regime": "strong_uptrend",
-      "mark": 85950.86,
+      "mark": 85967.66,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -33,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 20.0,
-        "polls": 3687,
+        "polls": 3688,
         "closed_bars_processed": 3,
         "errors": 24,
-        "poll_latency_ms_p50": 346.1214000126347,
+        "poll_latency_ms_p50": 345.1739000156522,
         "decision_latency_ms_p50": 137.35149998683482,
         "last_bar_ts": 1790013600000,
-        "uptime_s": 78720.02
+        "uptime_s": 78743.53
       },
-      "updated_iso": "2026-09-21T18:42:23Z"
+      "updated_iso": "2026-09-21T18:42:46Z"
     },
     {
       "run_id": "paper_20260921_104616",
@@ -50,7 +50,7 @@
       "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
       "fencing_epoch": 11,
       "regime": "strong_uptrend",
-      "mark": 85894.8,
+      "mark": 85905.8,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -72,15 +72,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 3120,
+        "polls": 3121,
         "closed_bars_processed": 18,
         "errors": 1,
-        "poll_latency_ms_p50": 262.2467000037432,
+        "poll_latency_ms_p50": 262.07749999593943,
         "decision_latency_ms_p50": 110.38920003920794,
         "last_bar_ts": 1790013600000,
-        "uptime_s": 53761.88
+        "uptime_s": 53780.44
       },
-      "updated_iso": "2026-09-21T18:42:17Z"
+      "updated_iso": "2026-09-21T18:42:36Z"
     }
   ],
   "start_equity": 10000.0,
