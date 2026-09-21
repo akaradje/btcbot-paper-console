@@ -45,7 +45,7 @@
     "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
     "fencing_epoch": 8,
     "regime": "mild_uptrend",
-    "mark": 81300.0,
+    "mark": 81277.8,
     "equity": 10000.0,
     "cash": 10000.0,
     "pos_qty": 0.0,
@@ -67,14 +67,14 @@
     "start_equity": 10000.0,
     "realtime": {
       "poll_s": 20.0,
-      "polls": 878,
+      "polls": 879,
       "closed_bars_processed": 3,
       "errors": 7,
       "poll_latency_ms_p50": 257.9951999941841,
       "decision_latency_ms_p50": 179.4655999983661,
       "last_bar_ts": 1789956000000,
-      "uptime_s": 19287.92
+      "uptime_s": 19308.26
     },
-    "updated_iso": "2026-09-21T02:11:51Z"
+    "updated_iso": "2026-09-21T02:12:12Z"
   }
 }
