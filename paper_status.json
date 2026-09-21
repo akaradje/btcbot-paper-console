@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-21T11:57:56Z",
+  "updated_iso": "2026-09-21T11:58:15Z",
   "mode": "paper_realtime",
   "venue_orders": false,
   "live_ticker": 84735.5,
@@ -33,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 1723,
+        "polls": 1724,
         "closed_bars_processed": 11,
         "errors": 1,
-        "poll_latency_ms_p50": 265.11480001499876,
+        "poll_latency_ms_p50": 264.5915999892168,
         "decision_latency_ms_p50": 123.74210002599284,
         "last_bar_ts": 1789988400000,
-        "uptime_s": 29500.68
+        "uptime_s": 29519.34
       },
-      "updated_iso": "2026-09-21T11:57:56Z"
+      "updated_iso": "2026-09-21T11:58:15Z"
     }
   ],
   "start_equity": 10000.0,
