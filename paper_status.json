@@ -1,17 +1,17 @@
 {
-  "updated_iso": "2026-09-21T14:02:15Z",
+  "updated_iso": "2026-09-21T14:02:25Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 85450.0,
+  "live_ticker": 85496.26,
   "sessions": [
     {
       "run_id": "paper_20260921_104616",
-      "market": "perp",
-      "symbol": "BTC/USDT:USDT",
-      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
+      "market": "spot",
+      "symbol": "BTC/USDT",
+      "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
       "fencing_epoch": 11,
       "regime": "strong_uptrend",
-      "mark": 85450.0,
+      "mark": 85496.26,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -33,24 +33,24 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 2148,
+        "polls": 2154,
         "closed_bars_processed": 14,
         "errors": 1,
-        "poll_latency_ms_p50": 396.8682999839075,
-        "decision_latency_ms_p50": 123.74210002599284,
+        "poll_latency_ms_p50": 406.30309999687597,
+        "decision_latency_ms_p50": 112.35050001414493,
         "last_bar_ts": 1789999200000,
-        "uptime_s": 36959.82
+        "uptime_s": 36969.75
       },
-      "updated_iso": "2026-09-21T14:02:15Z"
+      "updated_iso": "2026-09-21T14:02:25Z"
     },
     {
       "run_id": "paper_20260921_035023",
-      "market": "spot",
-      "symbol": "BTC/USDT",
-      "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
+      "market": "perp",
+      "symbol": "BTC/USDT:USDT",
+      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
       "fencing_epoch": 8,
       "regime": "strong_uptrend",
-      "mark": 85491.64,
+      "mark": 85450.0,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -72,15 +72,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 20.0,
-        "polls": 2895,
+        "polls": 2898,
         "closed_bars_processed": 3,
         "errors": 20,
-        "poll_latency_ms_p50": 395.5052000237629,
-        "decision_latency_ms_p50": 137.35149998683482,
+        "poll_latency_ms_p50": 397.3982000024989,
+        "decision_latency_ms_p50": 179.4655999983661,
         "last_bar_ts": 1789999200000,
-        "uptime_s": 61907.48
+        "uptime_s": 61915.72
       },
-      "updated_iso": "2026-09-21T14:02:10Z"
+      "updated_iso": "2026-09-21T14:02:19Z"
     }
   ],
   "start_equity": 10000.0,
