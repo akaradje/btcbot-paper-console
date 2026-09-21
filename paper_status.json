@@ -1,9 +1,48 @@
 {
-  "updated_iso": "2026-09-21T09:44:39Z",
+  "updated_iso": "2026-09-21T09:44:49Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 84997.1,
+  "live_ticker": 85037.46,
   "sessions": [
+    {
+      "run_id": "paper_20260921_104616",
+      "market": "spot",
+      "symbol": "BTC/USDT",
+      "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
+      "fencing_epoch": 11,
+      "regime": "strong_uptrend",
+      "mark": 85037.46,
+      "equity": 10000.0,
+      "cash": 10000.0,
+      "pos_qty": 0.0,
+      "cycles": 9,
+      "total_orders": 0,
+      "strategies": [
+        "ema_cross",
+        "bollinger_reversion",
+        "grid_dca",
+        "funding_bias",
+        "supertrend"
+      ],
+      "ownership_tag": "paper",
+      "mode": "paper_realtime",
+      "venue_orders": false,
+      "wal_enabled": true,
+      "fencing_enabled": true,
+      "book_keyed": true,
+      "start_equity": 10000.0,
+      "realtime": {
+        "poll_s": 15.0,
+        "polls": 1258,
+        "closed_bars_processed": 9,
+        "errors": 1,
+        "poll_latency_ms_p50": 262.0261000120081,
+        "decision_latency_ms_p50": 96.56630002427846,
+        "last_bar_ts": 1789981200000,
+        "uptime_s": 21513.14
+      },
+      "updated_iso": "2026-09-21T09:44:49Z"
+    },
     {
       "run_id": "paper_20260921_035023",
       "market": "perp",
@@ -42,45 +81,6 @@
         "uptime_s": 46455.45
       },
       "updated_iso": "2026-09-21T09:44:39Z"
-    },
-    {
-      "run_id": "paper_20260921_104616",
-      "market": "spot",
-      "symbol": "BTC/USDT",
-      "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
-      "fencing_epoch": 11,
-      "regime": "strong_uptrend",
-      "mark": 85020.91,
-      "equity": 10000.0,
-      "cash": 10000.0,
-      "pos_qty": 0.0,
-      "cycles": 9,
-      "total_orders": 0,
-      "strategies": [
-        "ema_cross",
-        "bollinger_reversion",
-        "grid_dca",
-        "funding_bias",
-        "supertrend"
-      ],
-      "ownership_tag": "paper",
-      "mode": "paper_realtime",
-      "venue_orders": false,
-      "wal_enabled": true,
-      "fencing_enabled": true,
-      "book_keyed": true,
-      "start_equity": 10000.0,
-      "realtime": {
-        "poll_s": 15.0,
-        "polls": 1257,
-        "closed_bars_processed": 9,
-        "errors": 1,
-        "poll_latency_ms_p50": 262.05650001065806,
-        "decision_latency_ms_p50": 96.56630002427846,
-        "last_bar_ts": 1789981200000,
-        "uptime_s": 21497.81
-      },
-      "updated_iso": "2026-09-21T09:44:33Z"
     }
   ],
   "start_equity": 10000.0,
