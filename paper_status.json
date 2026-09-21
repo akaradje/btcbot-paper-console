@@ -1,8 +1,8 @@
 {
-  "updated_iso": "2026-09-21T08:06:59Z",
+  "updated_iso": "2026-09-21T08:07:15Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 81908.01,
+  "live_ticker": 81931.76,
   "sessions": [
     {
       "run_id": "paper_20260921_104616",
@@ -11,7 +11,7 @@
       "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
       "fencing_epoch": 11,
       "regime": "mild_uptrend",
-      "mark": 81908.01,
+      "mark": 81931.76,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -33,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 916,
+        "polls": 917,
         "closed_bars_processed": 8,
         "errors": 0,
-        "poll_latency_ms_p50": 253.1777999829501,
+        "poll_latency_ms_p50": 253.09390004258603,
         "decision_latency_ms_p50": 102.15380002046004,
         "last_bar_ts": 1789977600000,
-        "uptime_s": 15643.92
+        "uptime_s": 15659.19
       },
-      "updated_iso": "2026-09-21T08:06:59Z"
+      "updated_iso": "2026-09-21T08:07:15Z"
     },
     {
       "run_id": "paper_20260921_035023",
@@ -50,7 +50,7 @@
       "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
       "fencing_epoch": 8,
       "regime": "mild_uptrend",
-      "mark": 81868.1,
+      "mark": 81891.8,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
@@ -72,15 +72,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 20.0,
-        "polls": 1891,
+        "polls": 1892,
         "closed_bars_processed": 3,
         "errors": 13,
-        "poll_latency_ms_p50": 252.64129997231066,
+        "poll_latency_ms_p50": 252.64030002290383,
         "decision_latency_ms_p50": 179.4655999983661,
         "last_bar_ts": 1789977600000,
-        "uptime_s": 40590.43
+        "uptime_s": 40610.72
       },
-      "updated_iso": "2026-09-21T08:06:54Z"
+      "updated_iso": "2026-09-21T08:07:14Z"
     }
   ],
   "start_equity": 10000.0,
