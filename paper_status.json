@@ -1,21 +1,21 @@
 {
-  "updated_iso": "2026-09-21T08:09:43Z",
+  "updated_iso": "2026-09-21T08:10:01Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 81906.5,
+  "live_ticker": 81926.92,
   "sessions": [
     {
-      "run_id": "paper_20260921_035023",
-      "market": "perp",
-      "symbol": "BTC/USDT:USDT",
-      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
-      "fencing_epoch": 8,
+      "run_id": "paper_20260921_104616",
+      "market": "spot",
+      "symbol": "BTC/USDT",
+      "book_key": "binance|paper-spot|binance:BTCUSDT:SPOT|one_way",
+      "fencing_epoch": 11,
       "regime": "mild_uptrend",
-      "mark": 81906.5,
+      "mark": 81926.92,
       "equity": 10000.0,
       "cash": 10000.0,
       "pos_qty": 0.0,
-      "cycles": 3,
+      "cycles": 8,
       "total_orders": 0,
       "strategies": [
         "ema_cross",
@@ -32,16 +32,16 @@
       "book_keyed": true,
       "start_equity": 10000.0,
       "realtime": {
-        "poll_s": 20.0,
-        "polls": 1899,
-        "closed_bars_processed": 3,
-        "errors": 13,
-        "poll_latency_ms_p50": 252.66319996444508,
-        "decision_latency_ms_p50": 179.4655999983661,
+        "poll_s": 15.0,
+        "polls": 927,
+        "closed_bars_processed": 8,
+        "errors": 0,
+        "poll_latency_ms_p50": 252.6802999782376,
+        "decision_latency_ms_p50": 102.15380002046004,
         "last_bar_ts": 1789977600000,
-        "uptime_s": 40759.73
+        "uptime_s": 15825.93
       },
-      "updated_iso": "2026-09-21T08:09:43Z"
+      "updated_iso": "2026-09-21T08:10:01Z"
     }
   ],
   "start_equity": 10000.0,
