@@ -1,9 +1,48 @@
 {
-  "updated_iso": "2026-09-21T15:28:15Z",
+  "updated_iso": "2026-09-21T15:28:29Z",
   "mode": "paper_realtime",
   "venue_orders": false,
-  "live_ticker": 85847.95,
+  "live_ticker": 85802.2,
   "sessions": [
+    {
+      "run_id": "paper_20260921_035023",
+      "market": "perp",
+      "symbol": "BTC/USDT:USDT",
+      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
+      "fencing_epoch": 8,
+      "regime": "strong_uptrend",
+      "mark": 85802.2,
+      "equity": 10000.0,
+      "cash": 10000.0,
+      "pos_qty": 0.0,
+      "cycles": 3,
+      "total_orders": 0,
+      "strategies": [
+        "ema_cross",
+        "bollinger_reversion",
+        "grid_dca",
+        "funding_bias",
+        "supertrend"
+      ],
+      "ownership_tag": "paper",
+      "mode": "paper_realtime",
+      "venue_orders": false,
+      "wal_enabled": true,
+      "fencing_enabled": true,
+      "book_keyed": true,
+      "start_equity": 10000.0,
+      "realtime": {
+        "poll_s": 20.0,
+        "polls": 3140,
+        "closed_bars_processed": 3,
+        "errors": 21,
+        "poll_latency_ms_p50": 556.1522000352852,
+        "decision_latency_ms_p50": 179.4655999983661,
+        "last_bar_ts": 1790002800000,
+        "uptime_s": 67085.95
+      },
+      "updated_iso": "2026-09-21T15:28:29Z"
+    },
     {
       "run_id": "paper_20260921_104616",
       "market": "spot",
@@ -42,45 +81,6 @@
         "uptime_s": 42119.77
       },
       "updated_iso": "2026-09-21T15:28:15Z"
-    },
-    {
-      "run_id": "paper_20260921_035023",
-      "market": "perp",
-      "symbol": "BTC/USDT:USDT",
-      "book_key": "binance|paper-perp|binance:BTCUSDT-USDT:PERP|one_way",
-      "fencing_epoch": 8,
-      "regime": "strong_uptrend",
-      "mark": 85814.2,
-      "equity": 10000.0,
-      "cash": 10000.0,
-      "pos_qty": 0.0,
-      "cycles": 3,
-      "total_orders": 0,
-      "strategies": [
-        "ema_cross",
-        "bollinger_reversion",
-        "grid_dca",
-        "funding_bias",
-        "supertrend"
-      ],
-      "ownership_tag": "paper",
-      "mode": "paper_realtime",
-      "venue_orders": false,
-      "wal_enabled": true,
-      "fencing_enabled": true,
-      "book_keyed": true,
-      "start_equity": 10000.0,
-      "realtime": {
-        "poll_s": 20.0,
-        "polls": 3139,
-        "closed_bars_processed": 3,
-        "errors": 21,
-        "poll_latency_ms_p50": 556.1522000352852,
-        "decision_latency_ms_p50": 179.4655999983661,
-        "last_bar_ts": 1790002800000,
-        "uptime_s": 67065.47
-      },
-      "updated_iso": "2026-09-21T15:28:09Z"
     }
   ],
   "start_equity": 10000.0,
