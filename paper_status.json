@@ -1,5 +1,5 @@
 {
-  "updated_iso": "2026-09-21T05:58:55Z",
+  "updated_iso": "2026-09-21T05:59:15Z",
   "mode": "paper_realtime",
   "venue_orders": false,
   "live_ticker": 81530.01,
@@ -33,15 +33,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 20.0,
-        "polls": 1524,
+        "polls": 1525,
         "closed_bars_processed": 3,
         "errors": 10,
         "poll_latency_ms_p50": 246.02199997752905,
         "decision_latency_ms_p50": 137.35149998683482,
         "last_bar_ts": 1789966800000,
-        "uptime_s": 32912.36
+        "uptime_s": 32932.64
       },
-      "updated_iso": "2026-09-21T05:58:55Z"
+      "updated_iso": "2026-09-21T05:59:15Z"
     },
     {
       "run_id": "paper_20260921_104616",
@@ -72,15 +72,15 @@
       "start_equity": 10000.0,
       "realtime": {
         "poll_s": 15.0,
-        "polls": 467,
+        "polls": 468,
         "closed_bars_processed": 5,
         "errors": 0,
-        "poll_latency_ms_p50": 244.94989996310323,
+        "poll_latency_ms_p50": 244.71709999488667,
         "decision_latency_ms_p50": 142.21099996939301,
         "last_bar_ts": 1789966800000,
-        "uptime_s": 7955.99
+        "uptime_s": 7974.18
       },
-      "updated_iso": "2026-09-21T05:58:51Z"
+      "updated_iso": "2026-09-21T05:59:10Z"
     }
   ],
   "start_equity": 10000.0,
