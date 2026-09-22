@@ -1,0 +1,61 @@
+{
+  "ts": "2026-09-22T12:52:18Z",
+  "dry_run": true,
+  "source": "data/panels/real",
+  "defensive_scale": 1.0,
+  "n_fills": 1,
+  "fees": 0.0,
+  "fills": [
+    {
+      "symbol": "TLT",
+      "side": "sell",
+      "qty": 19.251307271830637,
+      "price": 129.86131095928798,
+      "fee": 0.0,
+      "venue": "equity"
+    }
+  ],
+  "skipped": [],
+  "target": {
+    "BTC/USDT:USDT": 0.0,
+    "ETH/USDT:USDT": 0.0,
+    "SOL/USDT:USDT": 0.0,
+    "BNB/USDT:USDT": 0.0,
+    "XRP/USDT:USDT": 0.0,
+    "AVAX/USDT:USDT": 0.0,
+    "LINK/USDT:USDT": 0.0,
+    "DOGE/USDT:USDT": 0.0,
+    "ARB/USDT:USDT": 0.0,
+    "SPY": 0.0,
+    "QQQ": 0.0,
+    "IWM": 0.0,
+    "XLE": 0.0,
+    "XLF": 0.0,
+    "TLT": -0.25,
+    "GLD": 0.0,
+    "AAPL": 0.0,
+    "MSFT": 0.0,
+    "NVDA": 0.0
+  },
+  "marks": {
+    "BTC/USDT:USDT": 86009.67,
+    "ETH/USDT:USDT": 2754.59,
+    "SOL/USDT:USDT": 117.39,
+    "BNB/USDT:USDT": 788.93,
+    "XRP/USDT:USDT": 1.5416,
+    "AVAX/USDT:USDT": 10.828,
+    "LINK/USDT:USDT": 12.977,
+    "DOGE/USDT:USDT": 0.09912,
+    "ARB/USDT:USDT": 0.2209,
+    "SPY": 78.09266210003638,
+    "QQQ": 127.41313266755898,
+    "IWM": 84.17838143545019,
+    "XLE": 92.3407981452822,
+    "XLF": 56.14987250112659,
+    "TLT": 129.86131095928798,
+    "GLD": 118.04688506094978,
+    "AAPL": 131.99680655022047,
+    "MSFT": 125.1409620961647,
+    "NVDA": 156.65699567322557
+  }
+}

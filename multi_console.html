@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>btcbot — Multi-Asset Live Console (Paper)</title>
+<style>
+:root{--ink:#16181A;--muted:#7A8288;--line:#E4E4DF;--paper:#FBFAF7;--panel:#fff;--accent:#0F6B5C;--ok:#2F6B3A;--neg:#8E3B3B;--warn:#9A5B14}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:48px 28px 80px}
+h1{font-weight:250;letter-spacing:-.02em;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.badge{display:inline-block;font:11px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;background:#EAF2F0;color:var(--accent);border:1px solid #D5E5E1;margin-right:8px}
+.badge.warn{background:#FBF2E6;color:var(--warn);border-color:#EDDCC2}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.kpi div{background:var(--panel);padding:18px}
+.kpi .k{font:10px/1 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.kpi .v{font-size:24px;font-weight:250;margin:0}
+table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 32px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font:11px/1 ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.num{text-align:right;font-family:ui-monospace,monospace}
+.pos{color:var(--ok)}.neg{color:var(--neg)}
+pre{background:var(--panel);border:1px solid var(--line);padding:16px;overflow:auto;font-size:12px}
+footer{color:var(--muted);font-size:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="badge">PAPER / DRY-RUN</p>
+  <p class="badge warn">NOT LIVE MONEY</p>
+  <h1>Multi-Asset Live Console</h1>
+  <p class="sub">breakout portfolio · real BTC/ETH/SOL/BNB + companions · rebalance 24h</p>
+
+  <div class="kpi">
+    <div><p class="k">Last cycle</p><p class="v">2026-09-22T12:52:18Z</p></div>
+    <div><p class="k">Fills</p><p class="v">1</p></div>
+    <div><p class="k">Fees</p><p class="v">0.0000</p></div>
+    <div><p class="k">Defensive scale</p><p class="v">1.00</p></div>
+    <div><p class="k">Robust pass</p><p class="v">6/10</p></div>
+    <div><p class="k">Real OOS 3/4 tile</p><p class="v">0.5%</p></div>
+  </div>
+
+  <h2>Target weights</h2>
+  <table>
+    <thead><tr><th>Symbol</th><th class="num">Weight</th><th class="num">Mark</th></tr></thead>
+    <tbody><tr><td>TLT</td><td class='num'>-0.2500</td><td class='num'>129.86</td></tr>
+<tr><td>BTC/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>86009.67</td></tr>
+<tr><td>ETH/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>2754.59</td></tr>
+<tr><td>SOL/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>117.39</td></tr>
+<tr><td>BNB/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>788.93</td></tr>
+<tr><td>XRP/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>1.54</td></tr>
+<tr><td>AVAX/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>10.83</td></tr>
+<tr><td>LINK/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>12.98</td></tr>
+<tr><td>DOGE/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>0.10</td></tr>
+<tr><td>ARB/USDT:USDT</td><td class='num'>+0.0000</td><td class='num'>0.22</td></tr>
+<tr><td>SPY</td><td class='num'>+0.0000</td><td class='num'>78.09</td></tr>
+<tr><td>QQQ</td><td class='num'>+0.0000</td><td class='num'>127.41</td></tr>
+<tr><td>IWM</td><td class='num'>+0.0000</td><td class='num'>84.18</td></tr>
+<tr><td>XLE</td><td class='num'>+0.0000</td><td class='num'>92.34</td></tr>
+<tr><td>XLF</td><td class='num'>+0.0000</td><td class='num'>56.15</td></tr>
+<tr><td>GLD</td><td class='num'>+0.0000</td><td class='num'>118.05</td></tr>
+<tr><td>AAPL</td><td class='num'>+0.0000</td><td class='num'>132.00</td></tr>
+<tr><td>MSFT</td><td class='num'>+0.0000</td><td class='num'>125.14</td></tr>
+<tr><td>NVDA</td><td class='num'>+0.0000</td><td class='num'>156.66</td></tr></tbody>
+  </table>
+
+  <h2>Recent cycles</h2>
+  <table>
+    <thead><tr><th>UTC</th><th class="num">Fills</th><th class="num">Fees</th><th class="num">Scale</th></tr></thead>
+    <tbody><tr><td>2026-09-22T12:52:18Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T12:51:10Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T12:50:06Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T12:49:02Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T12:47:58Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T12:46:54Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr>
+<tr><td>2026-09-22T11:15:04Z</td><td class='num'>1</td><td class='num'>0.0000</td><td class='num'>1.00</td></tr></tbody>
+  </table>
+
+  <h2>Last snapshot</h2>
+  <pre>{
+  "ts": "2026-09-22T12:52:18Z",
+  "dry_run": true,
+  "source": "data/panels/real",
+  "defensive_scale": 1.0,
+  "n_fills": 1,
+  "fees": 0.0,
+  "fills": [
+    {
+      "symbol": "TLT",
+      "side": "sell",
+      "qty": 19.251307271830637,
+      "price": 129.86131095928798,
+      "fee": 0.0,
+      "venue": "equity"
+    }
+  ],
+  "skipped": [],
+  "target": {
+    "BTC/USDT:USDT": 0.0,
+    "ETH/USDT:USDT": 0.0,
+    "SOL/USDT:USDT": 0.0,
+    "BNB/USDT:USDT": 0.0,
+    "XRP/USDT:USDT": 0.0,
+    "AVAX/USDT:USDT": 0.0,
+    "LINK/USDT:USDT": 0.0,
+    "DOGE/USDT:USDT": 0.0,
+    "ARB/USDT:USDT": 0.0,
+    "SPY": 0.0,
+    "QQQ": 0.0,
+    "IWM": 0.0,
+    "XLE": 0.0,
+    "XLF": 0.0,
+    "TLT": -0.25,
+    "GLD": 0.0,
+    "AAPL": 0.0,
+    "MSFT": 0.0,
+    "NVDA": 0.0
+  },
+  "marks": {
+    "BTC/USDT:USDT": 86009.67,
+    "ETH/USDT:USDT": 2754.59,
+    "SOL/USDT:USDT": 117.39,
+    "BNB/USDT:USDT": 788.93,
+    "XRP/USDT:USDT": 1.5416,
+    "AVAX/USDT:USDT": 10.828,
+    "LINK/USDT:USDT": 12.977,
+    "DOGE/USDT:USDT": 0.09912,
+    "ARB/USDT:USDT": 0.2209,
+    "SPY": 78.09266210003638,
+    "QQQ": 127.41313266755898,
+    "IWM": 84.17838143545019,
+    "XLE": 92.3407981452822,
+    "XLF": 56.14987250112659,
+    "TLT": 129.86131095928798,
+    "GLD": 118.04688506094978,
+    "AAPL": 131.99680655022047,
+    "MSFT": 125.1409620961647,
+    "NVDA": 156.65699567322557
+  }
+}</pre>
+
+  <footer>generated by scripts/build_multi_console.py · journal data/realtime_multi.jsonl · always dry-run</footer>
+</div>
+</body>
+</html>
