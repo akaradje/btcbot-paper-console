@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>btcbot LIVE console (paper)</title>
+<style>
+:root{--ink:#0E1113;--muted:#6B7378;--line:#E4E4DF;--paper:#F7F6F2;--panel:#fff;--accent:#0F6B5C;--ok:#1F8A4C;--neg:#B33A3A;--warn:#A85C12}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:36px 22px 80px}
+header{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+h1{font-size:26px;font-weight:250;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0;font-size:13px}
+.tag{display:inline-block;font:11px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#EAF2F0;color:var(--accent);margin-right:8px}
+.tag.warn{background:#FBF2E6;color:var(--warn)}
+.live{display:flex;align-items:center;gap:8px;font:12px ui-monospace,monospace;color:var(--ok)}
+.pulse{width:10px;height:10px;border-radius:50%;background:var(--ok);animation:p 1.4s ease-in-out infinite}
+.pulse.stale{background:var(--warn);animation:none}
+@keyframes p{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:20px 0}
+.kpi div{background:var(--panel);padding:16px}
+.kpi .k{font:10px ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.kpi .v{font-size:22px;font-weight:250;margin:0;transition:color .4s}
+.kpi .v.up{color:var(--ok)}.kpi .v.dn{color:var(--neg)}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 24px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font:10px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.num,th.num{text-align:right;font-family:ui-monospace,monospace}
+.pos{color:var(--ok)}.neg{color:var(--neg)}
+canvas{background:var(--panel);border:1px solid var(--line);width:100%;height:220px;margin:8px 0 24px;border-radius:4px}
+.bar{height:8px;background:#EFEFE9;position:relative;margin-top:6px;border-radius:4px;overflow:hidden}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:var(--accent);border-radius:4px;transition:width .6s ease}
+.bar i.neg{background:var(--neg)}
+pre{background:var(--panel);border:1px solid var(--line);padding:12px;overflow:auto;font-size:11px;max-height:180px}
+footer{margin-top:28px;color:var(--muted);font-size:11px;border-top:1px solid var(--line);padding-top:14px}
+.note{background:#FBF2E6;border:1px solid #EDDCC2;color:#6E4410;padding:12px 14px;font-size:13px;margin:14px 0}
+h2{font:600 13px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:28px 0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <p class="tag">PAPER / DRY-RUN</p>
+    <p class="tag warn">NOT LIVE MONEY</p>
+    <h1>Multi-asset LIVE console</h1>
+    <p class="sub">breakout portfolio - real BTC/ETH/SOL/BNB - auto-refresh 30s</p>
+  </div>
+  <div class="live"><span class="pulse" id="pulse"></span><span id="clock">-</span></div>
+</header>
+<div class="note"><strong>Real-time paper.</strong> Orders simulated. Live transmit refused. Charts update from JSON every 30s.</div>
+<div class="kpi">
+  <div><p class="k">Equity</p><p class="v" id="eq">-</p></div>
+  <div><p class="k">Total PnL</p><p class="v" id="pnl">-</p></div>
+  <div><p class="k">PnL %</p><p class="v" id="pnlPct">-</p></div>
+  <div><p class="k">Max DD</p><p class="v" id="dd">-</p></div>
+  <div><p class="k">Cash</p><p class="v" id="cash">-</p></div>
+  <div><p class="k">Unrealized</p><p class="v" id="unreal">-</p></div>
+  <div><p class="k">Fees</p><p class="v" id="fees">-</p></div>
+  <div><p class="k">Last cycle</p><p class="v" id="ts" style="font-size:13px">-</p></div>
+</div>
+<h2>Equity curve</h2>
+<canvas id="eqChart" width="940" height="220"></canvas>
+<h2>Positions</h2>
+<table><thead><tr><th>Symbol</th><th class="num">Qty</th><th class="num">Avg</th><th class="num">Mark</th><th class="num">Unreal</th><th class="num">Notional</th></tr></thead>
+<tbody id="posRows"><tr><td colspan="6">loading...</td></tr></tbody></table>
+<h2>Target weights</h2>
+<div id="weights">loading...</div>
+<h2>Recent fills</h2>
+<table><thead><tr><th>UTC</th><th>Symbol</th><th>Side</th><th class="num">Qty</th><th class="num">Price</th><th class="num">Fee</th></tr></thead>
+<tbody id="fillRows"><tr><td colspan="6">loading...</td></tr></tbody></table>
+<h2>Raw snapshot</h2>
+<pre id="raw">loading...</pre>
+<footer>live_console.html - polls account_state.json + paper_multi_venue.json</footer>
+</div>
+<script>
+(function(){
+  const $ = (id)=>document.getElementById(id);
+  const fmt = (x, d=2)=> (x===null||x===undefined||isNaN(x)) ? "-" : Number(x).toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d});
+  let lastEq = null;
+  function drawChart(curve){
+    const c = $("eqChart"); if(!c || !curve || !curve.length) return;
+    const ctx = c.getContext("2d");
+    const W = c.width, H = c.height;
+    ctx.clearRect(0,0,W,H);
+    const eq = curve.map(p=>Number(p.equity)||0);
+    const mn = Math.min(...eq), mx = Math.max(...eq);
+    const pad = 24, span = (mx-mn)||1;
+    ctx.strokeStyle = "#E4E4DF"; ctx.lineWidth = 1;
+    for(let i=0;i<4;i++){
+      const y = pad + (H-2*pad)*i/3;
+      ctx.beginPath(); ctx.moveTo(pad,y); ctx.lineTo(W-pad,y); ctx.stroke();
+    }
+    ctx.beginPath();
+    eq.forEach((v,i)=>{
+      const x = pad + (W-2*pad)*i/Math.max(eq.length-1,1);
+      const y = pad + (H-2*pad)*(1-(v-mn)/span);
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    });
+    ctx.strokeStyle = (eq[eq.length-1]>=eq[0]) ? "#0F6B5C" : "#B33A3A";
+    ctx.lineWidth = 2; ctx.stroke();
+    ctx.lineTo(pad+(W-2*pad), H-pad); ctx.lineTo(pad, H-pad); ctx.closePath();
+    ctx.fillStyle = (eq[eq.length-1]>=eq[0]) ? "rgba(15,107,92,0.08)" : "rgba(178,59,59,0.08)";
+    ctx.fill();
+  }
+  function render(){
+    Promise.all([
+      fetch("account_state.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+      fetch("paper_multi_venue.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null),
+    ]).then(([acct, snap])=>{
+      const ts = (acct && acct.ts) || (snap && snap.ts) || new Date().toISOString();
+      $("clock").textContent = "updated " + ts;
+      $("pulse").classList.remove("stale");
+      if(acct){
+        const eq = acct.equity ?? 0;
+        $("eq").textContent = fmt(eq);
+        $("eq").className = "v " + (lastEq!==null && eq>lastEq ? "up" : lastEq!==null && eq<lastEq ? "dn" : "");
+        lastEq = eq;
+        const pnl = acct.total_pnl ?? (eq - (acct.equity0||10000));
+        const pnlPct = acct.total_pnl_pct ?? (pnl/(acct.equity0||10000)*100);
+        $("pnl").textContent = (pnl>=0?"+":"")+fmt(pnl);
+        $("pnl").className = "v " + (pnl>=0?"up":"dn");
+        $("pnlPct").textContent = (pnlPct>=0?"+":"")+fmt(pnlPct)+"%";
+        $("pnlPct").className = "v " + (pnlPct>=0?"up":"dn");
+        $("dd").textContent = fmt(acct.max_dd_pct ?? 0)+"%";
+        $("dd").className = "v " + ((acct.max_dd_pct??0)<0?"dn":"");
+        $("cash").textContent = fmt(acct.cash ?? 0);
+        $("unreal").textContent = fmt(acct.unrealized ?? 0);
+        $("unreal").className = "v " + ((acct.unrealized??0)>=0?"up":"dn");
+        $("fees").textContent = fmt(acct.fees ?? 0);
+        $("ts").textContent = (acct.ts || "").slice(11,19) || "-";
+        drawChart(acct.curve || []);
+        const pos = acct.positions || {};
+        const keys = Object.keys(pos);
+        $("posRows").innerHTML = keys.length ? keys.map(s=>{
+          const p = pos[s]; const u = p.unrealized||0;
+          return `<tr><td>${s}</td><td class="num">${fmt(p.qty,4)}</td><td class="num">${fmt(p.avg_price)}</td><td class="num">${fmt(p.mark)}</td><td class="num ${u>=0?"pos":"neg"}">${(u>=0?"+":"")+fmt(u)}</td><td class="num">${fmt(p.notional)}</td></tr>`;
+        }).join("") : "<tr><td colspan='6'>flat</td></tr>";
+        const fills = (acct.fills||[]).slice(-8).reverse();
+        $("fillRows").innerHTML = fills.length ? fills.map(f=>{
+          const t = new Date(f.ts||0).toISOString().slice(11,19);
+          return `<tr><td>${t}</td><td>${f.symbol}</td><td>${f.side}</td><td class="num">${fmt(f.qty,4)}</td><td class="num">${fmt(f.price)}</td><td class="num">${fmt(f.fee,4)}</td></tr>`;
+        }).join("") : "<tr><td colspan='6'>no fills</td></tr>";
+        $("raw").textContent = JSON.stringify(acct, null, 2).slice(0,4000);
+      }
+      if(snap && snap.target){
+        const t = snap.target;
+        const mx = Math.max(...Object.values(t).map(Math.abs), 0.01);
+        $("weights").innerHTML = Object.keys(t).sort((a,b)=>Math.abs(t[b])-Math.abs(t[a])).map(s=>{
+          const w = t[s]; const pct = Math.abs(w)/mx*100;
+          return `<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>${s}</span><span class="${w>=0?"pos":"neg"}">${(w>=0?"+":"")+fmt(w,4)}</span></div><div class="bar"><i class="${w<0?"neg":""}" style="width:${pct}%"></i></div></div>`;
+        }).join("");
+        if(snap.ts) $("ts").textContent = (snap.ts||"").slice(11,19) || $("ts").textContent;
+      }
+    }).catch(()=>{ $("pulse").classList.add("stale"); });
+  }
+  render();
+  setInterval(render, 30000);
+})();
+</script>
+</body>
+</html>

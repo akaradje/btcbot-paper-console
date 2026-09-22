@@ -1,0 +1,43 @@
+{
+  "ts": "2026-09-22T13:34:50Z",
+  "dry_run": true,
+  "equity0": 10000.0,
+  "cash": 12500.0,
+  "equity": 10000.0,
+  "unrealized": -2500.0,
+  "realized": 0.0,
+  "fees": 0.0,
+  "total_pnl": 0.0,
+  "total_pnl_pct": 0.0,
+  "max_dd_pct": 0.0,
+  "peak": 10000.0,
+  "positions": {
+    "TLT": {
+      "qty": -19.251307271830637,
+      "avg_price": 0.0,
+      "mark": 129.8613,
+      "unrealized": -2500.0,
+      "realized": 0.0,
+      "notional": -2500.0
+    }
+  },
+  "curve": [
+    {
+      "ts": 1790084090032,
+      "equity": 10000.0,
+      "cash": 12500.0,
+      "unrealized": -2500.0,
+      "realized": 0.0
+    }
+  ],
+  "fills": [
+    {
+      "ts": 1790084090032,
+      "symbol": "TLT",
+      "side": "sell",
+      "qty": 19.251307271830637,
+      "price": 129.86131095928798,
+      "fee": 0.0
+    }
+  ]
+}

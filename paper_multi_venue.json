@@ -1,7 +1,6 @@
 {
-  "ts": "2026-09-22T12:52:18Z",
+  "ts": "2026-09-22T13:34:50Z",
   "dry_run": true,
-  "source": "data/panels/real",
   "defensive_scale": 1.0,
   "n_fills": 1,
   "fees": 0.0,
@@ -15,7 +14,6 @@
       "venue": "equity"
     }
   ],
-  "skipped": [],
   "target": {
     "BTC/USDT:USDT": 0.0,
     "ETH/USDT:USDT": 0.0,
@@ -38,15 +36,15 @@
     "NVDA": 0.0
   },
   "marks": {
-    "BTC/USDT:USDT": 86009.67,
-    "ETH/USDT:USDT": 2754.59,
-    "SOL/USDT:USDT": 117.39,
-    "BNB/USDT:USDT": 788.93,
-    "XRP/USDT:USDT": 1.5416,
-    "AVAX/USDT:USDT": 10.828,
-    "LINK/USDT:USDT": 12.977,
-    "DOGE/USDT:USDT": 0.09912,
-    "ARB/USDT:USDT": 0.2209,
+    "BTC/USDT:USDT": 86048.01,
+    "ETH/USDT:USDT": 2756.93,
+    "SOL/USDT:USDT": 117.61,
+    "BNB/USDT:USDT": 790.49,
+    "XRP/USDT:USDT": 1.5541,
+    "AVAX/USDT:USDT": 11.007,
+    "LINK/USDT:USDT": 13.045,
+    "DOGE/USDT:USDT": 0.10051,
+    "ARB/USDT:USDT": 0.2203,
     "SPY": 78.09266210003638,
     "QQQ": 127.41313266755898,
     "IWM": 84.17838143545019,
@@ -57,5 +55,13 @@
     "AAPL": 131.99680655022047,
     "MSFT": 125.1409620961647,
     "NVDA": 156.65699567322557
+  },
+  "account": {
+    "equity": 10000.0,
+    "total_pnl_pct": 0.0,
+    "drawdown": 0.0,
+    "cash": 12500.0,
+    "unrealized": -2500.0,
+    "realized": 0.0
   }
 }
