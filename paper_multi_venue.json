@@ -1,5 +1,5 @@
 {
-  "ts": "2026-09-22T13:38:33Z",
+  "ts": "2026-09-22T13:38:38Z",
   "dry_run": true,
   "defensive_scale": 1.0,
   "n_fills": 0,
@@ -27,14 +27,14 @@
     "NVDA": 0.0
   },
   "marks": {
-    "BTC/USDT:USDT": 85830.0,
-    "ETH/USDT:USDT": 2748.98,
+    "BTC/USDT:USDT": 85836.0,
+    "ETH/USDT:USDT": 2749.09,
     "SOL/USDT:USDT": 117.26,
-    "BNB/USDT:USDT": 788.26,
-    "XRP/USDT:USDT": 1.5515,
-    "AVAX/USDT:USDT": 10.973,
-    "LINK/USDT:USDT": 12.979,
-    "DOGE/USDT:USDT": 0.09998,
+    "BNB/USDT:USDT": 788.24,
+    "XRP/USDT:USDT": 1.5517,
+    "AVAX/USDT:USDT": 10.977,
+    "LINK/USDT:USDT": 12.984,
+    "DOGE/USDT:USDT": 0.10001,
     "ARB/USDT:USDT": 0.2168,
     "SPY": 78.09266210003638,
     "QQQ": 127.41313266755898,
